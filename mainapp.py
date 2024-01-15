@@ -108,11 +108,11 @@ def open_new_window():
     new_window.geometry("900x700")
     new_window.config(bg="#717170")
 
-    # Add widgets and content to the new window as needed
+    #Text heading
     About_text = tk.Label(new_window, text="About", font=("Overpass Mono", 40, "bold"), bg="#717170", fg="white")
     About_text.pack(padx=20, pady=0)
 
-    # Load and display an image
+    #Load and display of image
     image_path = "coin.png"
     img = PhotoImage(file=image_path)
 
@@ -120,13 +120,13 @@ def open_new_window():
     image_label.image = img
     image_label.place(x=100, y=3)
 
-    # Add a description
+    #Description
     description_text = tk.Text(new_window, height=5, width=50, wrap=tk.WORD, bg="#717170", fg="white", font=("Overpass Mono", 10, "bold"))
     description_text.insert(tk.END, "Look4Movies is developed by John Patrick Falcon.\nSearching movies made convenient, made by movie lovers for movie lovers.")
     description_text.pack(padx=20, pady=20)
     description_text.place(x=250, y=530)
 
-    # Add a close button
+    #Close button
     close_button = tk.Button(new_window, text="Close", command=new_window.destroy, font=("Overpass Mono", 10, "bold"), bg="#ce7901", fg="white", width=10, height=1)
     close_button.pack(padx=20, pady=20)
     close_button.place(x=750, y=650)
